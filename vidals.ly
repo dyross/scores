@@ -47,8 +47,6 @@
     }
   }
 
-  \pageBreak
-
   \score {
     \header { piece = \markup { \fontsize #3 "4." } }
     <<
@@ -81,5 +79,82 @@
       c4 g, c a,2 e4 c2 d4 e2. c4 e c e2 c4 \break
       a,2 d4 e2. c4 e c e2 c4 a,2 d4 g,2. \bar "|."
     }
+  }
+
+  \score {
+    \header { piece = \markup { \fontsize #3 "6." } }
+    <<
+      {
+        \clef bass
+        \time 3/4
+        \key c \major
+
+        c2 e4 g2 d4 g2 f4 c2. d2 c4 f2 e4 a2 g4 \break
+        c'2. g2 e4 a2 d4 g2 c4 f2. g2 f4 g2 f4 \break
+        d2 g4 a2. f2 d4 g2. e2 c4 f2. d2 b,4 \break
+        e2 a,4 d2 g4 a2. f2. d2. g2. c2. ~ c4 r4 r \bar "|."
+      }
+      \figures {
+        r2. r r r r r r
+        r   r r r r r r
+        r   r r r r r r2 <5/>4
+      }
+    >>
+  }
+
+  \score {
+    \header { piece = \markup { \fontsize #3 "7." } }
+    {
+      \clef bass
+      \time 4/2
+      \key c \major
+
+      c2 g c f c e f1 d2 c f e a g c'1 \break
+      c'2 g a e f c f1 f2 d g c f g c1 \break
+      f1 g f g g2 f d g c f g1 \break
+      c2 g a f c e f1 d2 g a f d g c1 f2 d c1 \bar "|."
+    }
+  }
+
+  \score {
+    \header { piece = \markup { \fontsize #3 "8." } }
+    <<
+      {
+        \clef bass
+        \time 3/4
+        \key c \minor
+
+        c'2 g4 af2 f4 g2 c4 g2. f2 g4 \break
+        f2 g4 f2 c4 g2. c'2 g4 c'2 g4 \break
+        af2 ef4 f2. af2 f4 d2 g4 c2 f4 \break
+        c2. c'4 af f d2 g4 c2. ~ c4 r r \bar "|."
+      }
+      \figures {
+        r2 <_!>4 r2. <_!>2 r4 <_!>2. r2 <_!>4
+        r2 <_!>4 r2. <_!>2. r2 <_!>4 r2 <_->4
+        r2. r r <5/>2 <_!>4 r2.
+        r2. r <5/>2 <_!>4
+      }
+    >>
+  }
+
+  \score {
+    \header { piece = \markup { \fontsize #3 "9." } }
+    <<
+      {
+        \clef bass
+        \time 3/4
+        \key d \minor
+
+        d4 a d a2 b4 g2 e4 a2. d4 a d g2 e4 a2 a,4 d2. \break
+        d4 a f b2 f4 d2 g4 c2. f4 c f \break
+        c2 d4 b,2 c4 f2. d4 c f b,2 f4 d g f b2 f4 \break
+        b f d g2 f4 b2 eis4 a2. d4 a d a2 b4 g2 e4 \break
+        a2. d4 a d g2 e4 a2. a, d ~ d \bar "|."
+      }
+      \figures {
+        r2
+      }
+    >>
   }
 }
