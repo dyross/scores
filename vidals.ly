@@ -74,10 +74,9 @@
       \time 3/4
       \key g \major
 
-      g4 d g d2 g4 c2 a,4 d2. g4 e d g2 e4 \break
-      c2 g4 d2. d4 g d g2 d4 e2 b,4 c2. \break
-      c4 g, c a,2 e4 c2 d4 e2. c4 e c e2 c4 \break
-      a,2 d4 e2. c4 e c e2 c4 a,2 d4 g,2. \bar "|."
+      g4 d g d2 g4 c2 a,4 d2. g4 e d g2 e4 c2 g4 d2. \break
+      d4 g d g2 d4 e2 b,4 c2. c4 g, c a,2 e4 c2 d4 e2. \break
+      c4 e c e2 c4 a,2 d4 e2. c4 e c e2 c4 a,2 d4 g,2. \bar "|."
     }
   }
 
@@ -124,16 +123,14 @@
         \time 3/4
         \key c \minor
 
-        c'2 g4 af2 f4 g2 c4 g2. f2 g4 \break
-        f2 g4 f2 c4 g2. c'2 g4 c'2 g4 \break
-        af2 ef4 f2. af2 f4 d2 g4 c2 f4 \break
-        c2. c'4 af f d2 g4 c2. ~ c4 r r \bar "|."
+        c'2 g4 af2 f4 g2 c4 g2. f2 g4 f2 g4 f2 c4 g2. \break
+        c'2 g4 c'2 g4 af2 ef4 f2. af2 f4 d2 g4 \break
+        c2 f4 c2. c'4 af f d2 g4 c2. ~ c4 r r \bar "|."
       }
       \figures {
         r2 <_!>4 r2. <_!>2 r4 <_!>2. r2 <_!>4
         r2 <_!>4 r2. <_!>2. r2 <_!>4 r2 <_->4
-        r2. r r <5/>2 <_!>4 r2.
-        r2. r <5/>2 <_!>4
+        r2. r r r2 <_!>4 r2. r r r2 <_!>4 
       }
     >>
   }
@@ -146,14 +143,58 @@
         \time 3/4
         \key d \minor
 
-        d4 a d a2 b4 g2 e4 a2. d4 a d g2 e4 a2 a,4 d2. \break
-        d4 a f b2 f4 d2 g4 c2. f4 c f \break
-        c2 d4 b,2 c4 f2. d4 c f b,2 f4 d g f b2 f4 \break
-        b f d g2 f4 b2 eis4 a2. d4 a d a2 b4 g2 e4 \break
-        a2. d4 a d g2 e4 a2. a, d ~ d \bar "|."
+        d4 a d a2 bf4 g2 e4 a2. d4 a d g2 e4 a2 a,4 d2. \break
+        d4 a f bf2 f4 d2 g4 c2. f4 c f c2 d4 bf,2 c4 f2. d4 c f \break
+        bf,2 f4 d g f bf2 f4 bf f d g2 f4 bf2 e4 a2. d4 a d a2 bf4 \break
+        g2 e4 a2. d4 a d g2 e4 a2. a, d ~ d \bar "|."
       }
       \figures {
-        r2
+        \bassFigureExtendersOn
+        r4 <_+> r <_+>2 r4 r2. <_+> r4 <_+> r <_!>2 <5!>4 <_+>2 <_+>4 r2.
+        r4 <_!> r r2. r2 <_!>4 r2. r r r r r
+        r r r r r r <_+> r4 <_+> r <_+>2 r4
+        r2. <_+> r4 <_+> r <_!>2 <5!>4 <_+>2. <_+>2. r
+      }
+    >>
+  }
+
+  \score {
+    \header { piece = \markup { \fontsize #3 "10." } }
+    <<
+      {
+        \clef bass
+        \time 4/2
+        \key e \minor
+
+        e2 b c' a b1 a b2 e a fs b\breve \break
+        e2 g a e f1 c f2 e a c' b\breve \break
+        e2 b c' a b1 fs b2 gs cs' fs b\breve \break
+        e2 c g a b1 e a2 fs e b, e\breve \bar "|."
+      }
+      \figures {
+        r2 <_+> r r <_+>1 r <_+>4 r <_+>2 < 5+ [_+] >2 <_+> <_+>\breve
+        r\breve r r <_+>
+        r2 <_+> r r <_+>1 < 5+ [_+] > <_+>2 <5+ [_+]> <5+ [_+]> < 5+ [_+] > <_+>\breve
+        r <_+>1 r <_+>2 <5+> r <_+>
+      }
+    >>
+  }
+  
+  \score {
+    \header { piece = \markup { \fontsize #3 "11." } }
+    <<
+      {
+        \clef bass
+        \time 2/4
+        \key g \major
+
+        g4 d g e c g d2 e4 d g e c2 g d4 g e a \break
+        g c' g2 c'4 g a e a2 b e4 a b g e a d2 g4 d \break
+        e b, c2 d g,4 c a, d b, e d2 g4 d e c d2 g, \bar "|."
+      }
+      \figures {
+        r2 r r r r r r r r r
+        r r r r r <_+> r4 <_+> r2 r4 <_+> r2 r
       }
     >>
   }
